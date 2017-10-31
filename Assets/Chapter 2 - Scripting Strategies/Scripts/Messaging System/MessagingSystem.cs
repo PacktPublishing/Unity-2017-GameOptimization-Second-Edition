@@ -17,7 +17,8 @@ public class MessagingSystem : SingletonComponent<MessagingSystem> {
 
     public bool AttachListener(System.Type type, MessageHandlerDelegate handler) {
         if (type == null) {
-            Debug.Log("MessagingSystem: AttachListener failed due to no message type specified");
+            Debug.Log("MessagingSystem: AttachListener failed due to having no " + 
+                      "message type specified");
             return false;
         }
 
@@ -37,7 +38,8 @@ public class MessagingSystem : SingletonComponent<MessagingSystem> {
 
     public bool DetachListener(System.Type type, MessageHandlerDelegate handler) {
         if (type == null) {
-            Debug.Log("MessagingSystem: DetachListener failed due to no message type specified");
+            Debug.Log("MessagingSystem: DetachListener failed due to having no " + 
+                      "message type specified");
             return false;
         }
 

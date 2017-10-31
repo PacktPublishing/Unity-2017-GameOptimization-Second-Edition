@@ -15,7 +15,10 @@ public class SingletonComponent<T> : MonoBehaviour where T : SingletonComponent<
                         __Instance = managers[0];
                         return __Instance;
                     } else if (managers.Length > 1) {
-                        Debug.LogError("You have more than one " + typeof(T).Name + " in the Scene. You only need 1, it's a singleton!");
+                        Debug.LogError("You have more than one " + 
+                                        typeof(T).Name + 
+                                        " in the Scene. You only need " + 
+                                        "one - it's a singleton!");
                         for (int i = 0; i < managers.Length; ++i) {
                             T manager = managers[i];
                             Destroy(manager.gameObject);
